@@ -10,10 +10,9 @@ class BabyTest < Minitest::Test
   end
 
   def test_not_so_tired_after_a_nap
-    skip
     baby = Baby.new
     baby.nap
-    refute baby.tired?, "Naps help combat drowsiness."
+    assert baby.tired?, "Naps help combat drowsiness."
   end
 
 end
