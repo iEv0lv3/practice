@@ -7,8 +7,11 @@ def minimum_bribes(line)
       # (check that line[0] value - line[index + 2] value).abs <= 2
     elsif line[-1] == line[index]
       # (check that line[-1] value - line[index - 2] value).abs <= 2
-    else
+    elsif line[1] == line[index]
       # (check that line[index] value - line[index + 2] value).abs <= 2
+      # (check that line[index] value - line[index - 1] value).abs <= 1
+    elsif line[-2] == line[index]
+      # (check that line[index] value - line[index + 1] value).abs <= 1
       # (check that line[index] value - line[index - 2] value).abs <= 2
     end
   end
